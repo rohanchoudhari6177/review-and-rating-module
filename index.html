@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Simple reviews and ratings manager">
+    <title>Reviews & Ratings</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    </head>
+<body>
+
+    <header class="site-header">
+        <div class="container header-inner">
+            <div>
+                <h1>Reviews & Ratings</h1>
+                <p class="subtitle">Collect, review and manage customer feedback</p>
+            </div>
+        </div>
+    </header>
+
+    <main class="container grid">
+        <aside class="card form-card">
+            <h2>Submit Review</h2>
+
+            <label class="field">
+                <span>Product ID</span>
+                <input type="number" id="productId" placeholder="e.g. 12345">
+            </label>
+
+            <label class="field">
+                <span>Customer ID</span>
+                <input type="number" id="customerId" placeholder="e.g. 9876">
+            </label>
+
+            <div class="field">
+                <span>Rating</span>
+                <div id="starRating" class="stars" aria-label="Rating">
+                    <button class="star" data-value="1" aria-label="1 star">☆</button>
+                    <button class="star" data-value="2" aria-label="2 stars">☆</button>
+                    <button class="star" data-value="3" aria-label="3 stars">☆</button>
+                    <button class="star" data-value="4" aria-label="4 stars">☆</button>
+                    <button class="star" data-value="5" aria-label="5 stars">☆</button>
+                </div>
+            </div>
+
+            <label class="field">
+                <span>Review</span>
+                <textarea id="reviewText" placeholder="Share your experience..."></textarea>
+            </label>
+
+            <div class="form-actions">
+                <button id="submitBtn">Submit Review</button>
+            </div>
+        </aside>
+
+        <section class="reviews">
+            <div class="toolbar">
+                <input id="search" placeholder="Search reviews or product ID">
+            </div>
+
+            <div id="reviewList" class="review-list">
+                <!-- Reviews render here -->
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">Simple Reviews &copy; <span id="year"></span></div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
